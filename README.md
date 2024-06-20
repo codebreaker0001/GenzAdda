@@ -1,4 +1,4 @@
-#GenzAdda is a social medai app which allow user to create post addFriends and chat with them 
+# GenzAdda is a social medai app which allow user to create post addFriends and chat with them 
 
 I made this project with the help of mern stack and socket.io
 
