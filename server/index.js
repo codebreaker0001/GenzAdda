@@ -14,7 +14,7 @@ import { verifyToken } from './middleWare/middleWare.js'
 import { createPost } from './contollers/post.js'
 import User from './modles/user.js'
 import Post from './modles/posts.js'
-import {users,posts} from './data/index.js'
+// import {users,posts} from './data/index.js'
 
 import authRoutes from "./routes/authRoute.js";
 import userRoutes from "./routes/userRoute.js";
@@ -88,8 +88,6 @@ console.log(PORT);
 
 mongoose.connect(process.env.MONGO_URL).then(() =>{
     app.listen(PORT,() => console.log(`Server PORT: ${PORT}  `))
-    // User.insertMany(users)
-    // Post.insertMany(posts)
 }).catch((err)  => console.log(`${err} Not Connected`))
 
 
