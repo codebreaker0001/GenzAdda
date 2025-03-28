@@ -13,8 +13,8 @@ function ChatStore({ conversation, currentUser }) {
     
     useEffect(() => {
   const getUser = async () => {
-    try {
-      const response = await fetch(`http://localhost:3001/users/${friendId}`, {
+    try{
+      const response = await fetch(`https://genzadda-1.onrender.com/users/${friendId}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -20,7 +20,7 @@ function Chat() {
   const scrollRef = useRef();
 
   useEffect(() => {
-    socket.current = io("ws://localhost:3003");
+    socket.current = io("https://genzadda-2.onrender.com");
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({
         sender: data.senderId,
@@ -49,7 +49,7 @@ function Chat() {
   useEffect(() => {
     const getConversations = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/chats/${user._id}`);
+        const response = await axios.get(`https://genzadda-1.onrender.com/chats/${user._id}`);
         setConversations(response.data);
       } catch (error) {
         console.log('Error fetching conversations:', error);
@@ -63,7 +63,7 @@ function Chat() {
     const getMessages = async () => {
       if (currentChat) {
         try {
-          const res = await axios.get(`http://localhost:3001/messages/${currentChat._id}`);
+          const res = await axios.get(`https://genzadda-1.onrender.com/messages/${currentChat._id}`);
           setMessages(res.data);
         } catch (error) {
           console.log('Error fetching messages:', error);
@@ -94,7 +94,7 @@ function Chat() {
     });
 
     try {
-      const response = await axios.post(`http://localhost:3001/messages`, message);
+      const response = await axios.post(`https://genzadda-1.onrender.com/messages`, message);
       setMessages([...messages, response.data]);
       setNewMessages('');
     } catch (error) {

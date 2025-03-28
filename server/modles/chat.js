@@ -11,6 +11,14 @@ const conversationSchema = mongoose.Schema({
 {timeStamps:true}
 );
 
+
+
+
+
 const Conversation = mongoose.model('Conversation', conversationSchema);
+
+
+
+
 
 export default Conversation;

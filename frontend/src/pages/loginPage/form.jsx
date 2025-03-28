@@ -11,7 +11,6 @@ import { useDispatch } from 'react-redux'
 import Dropzone from 'react-dropzone'
 import FlexBetween from '../../components/flexbtween'
 import { useNavigate } from 'react-router-dom';
-
 const registerSchema = yup.object().shape({
     firstName: yup.string().required("required"),
     lastName: yup.string().required("required"),
@@ -66,7 +65,7 @@ function Form() {
         formData.append('picturePath', values.picture.name);
 
         const savedUserResponse = await fetch(
-            "http://localhost:3001/auth/register",
+            "https://genzadda-1.onrender.com/auth/register",
             {
                 method: "POST",
                 body: formData,
@@ -83,7 +82,7 @@ function Form() {
 
     const login = async (values, onSubmitProps) => {
         const response = await fetch(
-            "http://localhost:3001/auth/login",
+            "https://genzadda-1.onrender.com/auth/login",
             {
                 method: "POST",
                 headers: {

@@ -21,12 +21,12 @@ function OnlineChat({ onlineUser, currentId,setCurrentChat }) {
 
   const handleClick = async (friend) => {
     try {
-      const response = await axios.get(`http://localhost:3001/chats/find/${currentId}/${friend._id}`);
+      const response = await axios.get(`https://genzadda-1.onrender.com/chats/find/${currentId}/${friend._id}`);
       if (response.data) {
         setCurrentChat(response.data);
       } else {
         // If chat does not exist, create a new one
-        const newChatResponse = await axios.post(`http://localhost:3001/chats`, {
+        const newChatResponse = await axios.post(`https://genzadda-1.onrender.com/chats`, {
           senderId: currentId,
           receiverId: friend._id,
         });

@@ -46,7 +46,7 @@ const PostWidget = ({
     
     const patchLike = async () => {
         console.log(postId);
-        const response = await fetch(`http://localhost:3001/posts/${postId}/like`, {
+        const response = await fetch(`https://genzadda-1.onrender.com/posts/${postId}/like`, {
             method: "PATCH",
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -59,7 +59,7 @@ const PostWidget = ({
     }
 
     const handleCommentSubmit = async () => {
-      const response = await fetch(`http://localhost:3001/posts/${postId}/comment`, {
+      const response = await fetch(`https://genzadda-1.onrender.com/posts/${postId}/comment`, {
           method: "PATCH",
           headers: {
               Authorization: `Bearer ${token}`,

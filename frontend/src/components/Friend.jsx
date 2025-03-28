@@ -29,7 +29,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
     // console.log(isFriend);
     // console.log(friendId);
     const patchFriend = async () => {
-        const response = await fetch(`http://localhost:3001/users/${_id}/${friendId}`,{
+        const response = await fetch(`https://genzadda-1.onrender.com/users/${_id}/${friendId}`,{
             method: "PATCH",
             headers: {
               Authorization: `Bearer ${token}`,
